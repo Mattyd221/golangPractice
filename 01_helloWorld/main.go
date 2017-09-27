@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/Mattyd221/golangPractice/myUtils"
+	"github.com/Mattyd221/golangPractice/myUtils/fileUtils"
 	"fmt"
 )
 
 func main() {
-
-	fmt.Println(myUtils.RightPadToLength("0123456789"," ",16))
-	fmt.Println(myUtils.LeftPadToLength("0123456789"," ",16))
+	// + = Static
+	// ! = file pos
+	// # = random Number
+	// $ = spaces
+	fmt.Println(fileUtils.LineDefinition("#2!0+testing!2$2+ha#3+ha"))
 }
