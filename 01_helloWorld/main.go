@@ -10,5 +10,5 @@ func main() {
 	// ! = file pos
 	// # = random Number
 	// $ = spaces
-	fmt.Println(fileUtils.LineDefinition("#2!0+testing!2$2+ha#3+ha"))
+	fmt.Println(fileUtils.LineDefinition("#2+1!0+testing!2$2+ha#3+ha"))
 }

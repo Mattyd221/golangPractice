@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"math/rand"
 	"time"
+	"fmt"
 )
 
 func ReadLines(path string) ([]string, error) {
@@ -39,6 +40,20 @@ func ReadAll(path string) ([]string, error) {
 	content, err2 := ioutil.ReadAll(reader)
 
 	return strings.Split(string(content),"\n"), err2
+}
+
+func writeLines(lines []string, path string) error {
+  file, err := os.Create(path)
+  if err != nil {
+    return err
+  }
+  defer file.Close()
+
+  writer := bufio.NewWriter(file)
+  for _, line := range lines {
+    fmt.Fprintln(writer, line)
+  }
+  return writer.Flush()
 }
 
 func LineDefinition(definitionString string) string {
