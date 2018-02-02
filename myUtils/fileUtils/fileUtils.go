@@ -39,7 +39,7 @@ func ReadAll(path string) ([]string, error) {
 	reader := bufio.NewReader(file)
 	content, err2 := ioutil.ReadAll(reader)
 
-	return strings.Split(string(content),"\n"), err2
+	return strings.Split(string(content),"\r\n"), err2
 }
 
 func writeLines(lines []string, path string) error {
